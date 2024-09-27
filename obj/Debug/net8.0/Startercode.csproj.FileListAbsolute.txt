@@ -28,3 +28,4 @@ C:\Users\HAPE\Desktop\DOTNET STARTERCODE\Startercode\obj\Debug\net8.0\refint\Sta
 C:\Users\HAPE\Desktop\DOTNET STARTERCODE\Startercode\obj\Debug\net8.0\Startercode.pdb
 C:\Users\HAPE\Desktop\DOTNET STARTERCODE\Startercode\obj\Debug\net8.0\Startercode.genruntimeconfig.cache
 C:\Users\HAPE\Desktop\DOTNET STARTERCODE\Startercode\obj\Debug\net8.0\ref\Startercode.dll
+C:\Users\HAPE\Desktop\DOTNET STARTERCODE\Startercode\obj\Debug\net8.0\Startercode.sourcelink.json
