@@ -20,6 +20,7 @@ namespace StarterCode.Controllers
             _context = context;
         }
 
+
         // GET: Post
         [HttpGet]
         public async Task<IActionResult> Index()
@@ -27,6 +28,12 @@ namespace StarterCode.Controllers
             return View(await _context.Posts.ToListAsync());
         }
 
+        // GET: Post/Details/5
+        [HttpGet("layouts")]
+        public async Task<IActionResult> Layouts()
+        {
+            return View("layouts/defult");
+        }
         // GET: Post/Details/5
         [HttpGet("Details/{id}")]
         public async Task<IActionResult> Details(long? id)
