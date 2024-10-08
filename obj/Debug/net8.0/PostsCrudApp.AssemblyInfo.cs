@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PostsCrudApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfe20d8db01dbd41c7780aaf53aaf9c4a4302688")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+490dc7b32b1c5e5d003f185a8d9e8eb9fcb2b391")]
 [assembly: System.Reflection.AssemblyProductAttribute("PostsCrudApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PostsCrudApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

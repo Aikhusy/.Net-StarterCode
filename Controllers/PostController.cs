@@ -36,8 +36,7 @@ namespace StarterCode.Controllers
                 return NotFound();
             }
 
-            var posts = await _context.Posts
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var posts = await _context.Posts.FirstOrDefaultAsync(m => m.Id == id);
             if (posts == null)
             {
                 return NotFound();
