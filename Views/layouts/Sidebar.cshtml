@@ -1,8 +1,10 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 <div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar"
     data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px"
     data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
     <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
-        <a href="index.html">
+        <a href="#">
             <img alt="Logo" src="assets/media/logos/default-dark.svg" class="h-25px app-sidebar-logo-default" />
             <img alt="Logo" src="assets/media/logos/default-small.svg" class="h-20px app-sidebar-logo-minimize" />
         </a>
@@ -45,177 +47,44 @@ if (isset($_COOKIE["sidebar_minimize_state"]) && $_COOKIE["sidebar_minimize_stat
                             </span>
                             <span class="menu-title">Dashboards</span>
                             <span class="menu-arrow"></span>
+
                         </span>
                         <div class="menu-sub menu-sub-accordion">
                             <div class="menu-item">
-                                <a class="menu-link {{ Request::routeIs('default') ? 'active' : '' }}"
-                                    href="{{ route('default') }}">
+                                <a class="menu-link" asp-controller="Post" asp-action="Layouts">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">Default</span>
+                                    <span class="menu-title">Main Dashboard</span>
                                 </a>
                             </div>
+
+
                             <div class="menu-item">
                                 <a class="menu-link {{ Request::routeIs('ecommerce') ? 'active' : '' }}"
                                     href="{{ route('ecommerce') }}">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">eCommerce</span>
+                                    <span class="menu-title">Firewall</span>
                                 </a>
                             </div>
-                            <div class="menu-item">
-                                <a class="menu-link {{ Request::routeIs('projects') ? 'active' : '' }}"
-                                    href="{{ route('projects') }}">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">Projects</span>
-                                </a>
-                            </div>
+
                             <div class="menu-item">
                                 <a class="menu-link {{ Request::routeIs('online-course') ? 'active' : '' }}"
                                 href="{{ route('online-course') }}">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">Online Courses</span>
+                                    <span class="menu-title">Login Firewall</span>
                                 </a>
                             </div>
-                            <div class="menu-item">
-                                <a class="menu-link {{ Request::routeIs('marketing') ? 'active' : '' }}"
-                                href="{{ route('marketing') }}">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">Marketing</span>
-                                </a>
-                            </div>
-                            <div class="menu-inner flex-column collapse" id="kt_app_sidebar_menu_dashboards_collapse">
-                                <div class="menu-item">
-                                    <a class="menu-link {{ Request::routeIs('bidding') ? 'active' : '' }}"
-                                    href="{{ route('bidding') }}">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Bidding</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link {{ Request::routeIs('pos-system') ? 'active' : '' }}"
-                                    href="{{ route('pos-system') }}">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Pos System</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="dashboards/call-center.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Call Center</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="dashboards/logistics.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Logistics</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="dashboards/website-analytics.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Website Analytics</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="dashboards/finance-performance.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Finance Performance</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="dashboards/store-analytics.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Store Analytics</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="dashboards/social.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Social</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="dashboards/delivery.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Delivery</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="dashboards/crypto.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Crypto</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="dashboards/school.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">School</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="dashboards/podcast.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Podcast</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link" href="landing.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Landing</span>
-                                    </a>
-                                </div>
-                            </div>
+
+                        
+                            
                             <div class="menu-item">
                                 <div class="menu-content">
-                                    <a class="btn btn-flex btn-color-primary d-flex flex-stack fs-base p-0 ms-2 mb-2 toggle collapsible collapsed"
-                                        data-bs-toggle="collapse" href="#kt_app_sidebar_menu_dashboards_collapse"
-                                        data-kt-toggle-text="Show Less">
-                                        <span data-kt-toggle-text-target="true">Show 12 More</span>
-                                        <i class="ki-duotone ki-minus-square toggle-on fs-2 me-0">
-                                            <span class="path1"></span>
-                                            <span class="path2"></span>
-                                        </i>
-                                        <i class="ki-duotone ki-plus-square toggle-off fs-2 me-0">
-                                            <span class="path1"></span>
-                                            <span class="path2"></span>
-                                            <span class="path3"></span>
-                                        </i>
-                                    </a>
+                                    
                                 </div>
                             </div>
                         </div>

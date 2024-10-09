@@ -32,7 +32,7 @@ namespace StarterCode.Controllers
         [HttpGet("layouts")]
         public async Task<IActionResult> Layouts()
         {
-            return View("layouts/defult");
+            return View("~/Views/layouts/defult.cshtml");
         }
         // GET: Post/Details/5
         [HttpGet("Details/{id}")]

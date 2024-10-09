@@ -1,7 +1,6 @@
 @{
-    Layout = null; // Set layout if you have one, or remove this line to use the default
+    Layout = null; 
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +11,7 @@
     <meta name="csrf-token" content="@Html.AntiForgeryToken()" />
     <link rel="shortcut icon" href="~/assets/media/logos/favicon.ico" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
-    @Html.Partial("layouts/Style") // Include your style partial view
+    @Html.Partial("~/Views/layouts/Style.cshtml") 
 </head>
 
 <body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true"
@@ -42,18 +41,18 @@
 
     <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
         <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
-            @Html.Partial("layouts/Header") // Include your header partial view
+            @Html.Partial("~/Views/layouts/Header.cshtml") 
             <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
-                @Html.Partial("layouts/Sidebar") // Include your sidebar partial view
+                @Html.Partial("~/Views/layouts/Sidebar.cshtml") 
                 <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
-                    @RenderBody() // This renders the content of the view
-                    @Html.Partial("layouts/Footer") // Include your footer partial view
+                    @RenderBody() 
+                    @Html.Partial("~/Views/layouts/Footer.cshtml") 
                 </div>
             </div>
         </div>
     </div>
 
-    @RenderSection("Modals", required: false) // Render modals section if it exists
-    @Html.Partial("layouts/Script") // Include your script partial view
+    @RenderSection("Modals", required: false) 
+    @Html.Partial("~/Views/layouts/Script.cshtml") 
 </body>
 </html>
