@@ -9,7 +9,7 @@ using StarterCode.Data;
 
 namespace StarterCode.Controllers
 {
-    [Route("Posts")]
+    [Route("Dashboard")]
     public class DashboardController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -24,8 +24,13 @@ namespace StarterCode.Controllers
         [HttpGet("Main")]
         public async Task<IActionResult> Main()
         {
-            return View("Dashboard/Main");
+            return View("~/Views/Dashboard/Main.cshtml");
         }
 
+        [HttpGet("Detailed")]
+        public async Task<IActionResult> Detailed()
+        {
+            return View("~/Views/Dashboard/Detailed.cshtml");
+        }
     }
 }

@@ -51,7 +51,7 @@ if (isset($_COOKIE["sidebar_minimize_state"]) && $_COOKIE["sidebar_minimize_stat
                         </span>
                         <div class="menu-sub menu-sub-accordion">
                             <div class="menu-item">
-                                <a class="menu-link" asp-controller="Post" asp-action="Layouts">
+                                <a class="menu-link" asp-controller="Dashboard" asp-action="Main">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
@@ -61,27 +61,14 @@ if (isset($_COOKIE["sidebar_minimize_state"]) && $_COOKIE["sidebar_minimize_stat
 
 
                             <div class="menu-item">
-                                <a class="menu-link {{ Request::routeIs('ecommerce') ? 'active' : '' }}"
-                                    href="{{ route('ecommerce') }}">
+                                <a class="menu-link" asp-controller="Dashboard" asp-action="Detailed">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">Firewall</span>
+                                    <span class="menu-title">Detailed</span>
                                 </a>
                             </div>
-
-                            <div class="menu-item">
-                                <a class="menu-link {{ Request::routeIs('online-course') ? 'active' : '' }}"
-                                href="{{ route('online-course') }}">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">Login Firewall</span>
-                                </a>
-                            </div>
-
-                        
-                            
+                                                  
                             <div class="menu-item">
                                 <div class="menu-content">
                                     
