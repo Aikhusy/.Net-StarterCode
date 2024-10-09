@@ -58,6 +58,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXE1haW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/HAPE/Desktop/.Net Startercode/Views/Firewall/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyZXdhbGxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAPE/Desktop/.Net Startercode/Views/Firewall/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyZXdhbGxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAPE/Desktop/.Net Startercode/Views/Firewall/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyZXdhbGxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAPE/Desktop/.Net Startercode/Views/Firewall/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyZXdhbGxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HAPE/Desktop/.Net Startercode/Views/Firewall/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyZXdhbGxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/HAPE/Desktop/.Net Startercode/Views/layouts/Base.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbGF5b3V0c1xCYXNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

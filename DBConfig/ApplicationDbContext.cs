@@ -10,5 +10,7 @@ namespace StarterCode.Data
         }
 
         public DbSet<Posts> Posts { get; set; }
+
+        public DbSet<Firewall> Firewalls{ get; set;}
     }
 }
