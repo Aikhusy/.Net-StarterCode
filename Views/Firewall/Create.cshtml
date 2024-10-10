@@ -4,7 +4,7 @@
     Layout = "~/Views/layouts/Base.cshtml";
     ViewData["Title"] = "Create Firewall Data";
 }
-@* New *@
+
 
 <div class="d-flex flex-column flex-column-fluid">
     <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
@@ -108,8 +108,7 @@
                                 <!--end::Label-->
 
                                 <!--begin::Input-->
-                                <input asp-for="fw_site" type="text" class="form-control form-control-solid"
-                                    value="">
+                                <input asp-for="fw_site" type="text" class="form-control form-control-solid" value="">
                                 <!--end::Input-->
                                 <div
                                     class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
@@ -119,9 +118,11 @@
 
                             <div class="d-flex justify-content-end">
                                 <!--begin::Button-->
-                                <button asp-action="Index" asp-controller="Firewall" type="reset" data-kt-contacts-type="cancel" class="btn btn-light me-3">
-                                    Cancel
-                                </button>
+                                <div class="d-flex align-items-center gap-2 gap-lg-3">
+                                    <a asp-action="Index" asp-controller="Firewall" data-kt-contacts-type="cancel" 
+                                        class="btn btn-light me-3">Cancel</a>
+                                </div>
+    
                                 <!--end::Button-->
 
                                 <!--begin::Button-->

@@ -35,8 +35,8 @@
                 <!--begin::Header-->
                 <div class="card-header border-0 pt-5">
                     <h3 class="card-title align-items-start flex-column">
-                        <span class="card-label fw-bold fs-3 mb-1">Recent Orders</span>
-                        <span class="text-muted mt-1 fw-semibold fs-7">Over 500 orders</span>
+                        <span class="card-label fw-bold fs-3 mb-1">Firewall</span>
+                        <span class="text-muted mt-1 fw-semibold fs-7">List of Firewall</span>
                     </h3>
                 </div>
                 <!--end::Header-->
@@ -87,19 +87,18 @@
                                             <a asp-action="Edit" asp-route-id="@item.id" asp-controller="Firewall"
                                                 class="text-gray-900 fw-bold text-hover-primary d-block mb-1 fs-6">@Html.DisplayFor(modelItem
                                             => item.fw_site)</a>
-
                                         </td>
 
                                         <td class="text-end">
                                             <a asp-action="Edit" asp-route-id="@item.id" asp-controller="Firewall"
-                                                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
+                                                class="btn btn-icon btn-bg-warning btn-active-color-dark btn-sm me-1">
                                                 <i class="ki-duotone ki-pencil fs-2">
                                                     <span class="path1"></span>
                                                     <span class="path2"></span>
                                                 </i>
                                             </a>
                                             <a asp-action="Delete" asp-route-id="@item.id" asp-controller="Firewall"
-                                                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                                                class="btn btn-icon btn-bg-danger btn-active-color-dark btn-sm">
                                                 <i class="ki-duotone ki-trash fs-2">
                                                     <span class="path1"></span>
                                                     <span class="path2"></span>
