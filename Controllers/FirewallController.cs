@@ -57,15 +57,15 @@ namespace StarterCode.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost("Create")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("fw_name,fw_location,fw_site")] Posts posts)
+        public async Task<IActionResult> Create([Bind("fw_name,fw_location,fw_site")] Firewall firewall)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(posts);
+                _context.Add(firewall);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(posts);
+            return View(firewall);
         }
 
         // GET: Post/Edit/5
@@ -77,12 +77,12 @@ namespace StarterCode.Controllers
                 return NotFound();
             }
 
-            var posts = await _context.Posts.FindAsync(id);
-            if (posts == null)
+            var firewalls = await _context.Firewalls.FindAsync(id);
+            if (firewalls == null)
             {
                 return NotFound();
             }
-            return View(posts);
+            return View(firewalls);
         }
 
         // POST: Post/Edit/5
@@ -90,9 +90,9 @@ namespace StarterCode.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost("Edit/{id}")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long id, [Bind("Id,Title,Content,Rating")] Posts posts)
+        public async Task<IActionResult> Edit(long id, [Bind("id,fw_name,fw_location,fw_site")] Firewall firewall)
         {
-            if (id != posts.Id)
+            if (id != firewall.id)
             {
                 return NotFound();
             }
@@ -101,12 +101,12 @@ namespace StarterCode.Controllers
             {
                 try
                 {
-                    _context.Update(posts);
+                    _context.Update(firewall);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PostsExists(posts.Id))
+                    if (!FirewallsExists(firewall.id))
                     {
                         return NotFound();
                     }
@@ -117,7 +117,7 @@ namespace StarterCode.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(posts);
+            return View(firewall);
         }
 
         // GET: Post/Delete/5
@@ -129,14 +129,14 @@ namespace StarterCode.Controllers
                 return NotFound();
             }
 
-            var posts = await _context.Posts
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (posts == null)
+            var firewall = await _context.Firewalls
+                .FirstOrDefaultAsync(m => m.id == id);
+            if (firewall == null)
             {
                 return NotFound();
             }
 
-            return View(posts);
+            return View(firewall);
         }
 
         // POST: Post/Delete/5
@@ -144,19 +144,19 @@ namespace StarterCode.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(long id)
         {
-            var posts = await _context.Posts.FindAsync(id);
-            if (posts != null)
+            var firewall = await _context.Firewalls.FindAsync(id);
+            if (firewall != null)
             {
-                _context.Posts.Remove(posts);
+                _context.Firewalls.Remove(firewall);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PostsExists(long id)
+        private bool FirewallsExists(long id)
         {
-            return _context.Posts.Any(e => e.Id == id);
+            return _context.Firewalls.Any(e => e.id == id);
         }
     }
 }
